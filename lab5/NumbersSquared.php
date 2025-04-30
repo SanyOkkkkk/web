@@ -1,9 +1,9 @@
 <?php
 
 class NumbersSquared implements Iterator{
-    private $start;
-    private $end;
-    private $current;
+    private int $start;
+    private int $end;
+    private int $current;
 
     public function __construct(int $start, int $end)
     {
@@ -36,10 +36,12 @@ class NumbersSquared implements Iterator{
         return $this->current ** 2;
     }
 }
-
+echo '<pre>';
 // Создаем объект класса NumbersSquared от 3 до 7
 $obj = new NumbersSquared(3, 7);
 
 foreach ($obj as $num => $square) {
     echo "Квадрат числа $num = $square\n";
 }
+echo '</pre>';
+
